@@ -1,0 +1,21 @@
+# Python & Jupyter
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Model weights & checkpoints (terlalu besar untuk GitHub)
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.onnx
+
+# Raw datasets & archives (download ulang via Roboflow API)
+datasets/
+raw_hp_photos/
+preannotated_*/
+*.zip
+
+# Secrets & env
+.env
+*.key

@@ -1,0 +1,7 @@
+model,architecture_family,imgsz,epochs,batch_size,gpu_name,train_time_minutes,results_csv
+MaskRCNN-R50-FPNv2,Two-Stage CNN,640,15,4,Tesla T4,13.91,/kaggle/working/cpmk3/runs/maskrcnn/maskrcnn_img640/results.csv
+Mask2Former-Swin-Tiny,Transformer,640,15,8,Tesla T4,27.04,/kaggle/working/cpmk3/runs/mask2former/m2f_swin_tiny_img640/results.csv
+MaskRCNN-R50-FPNv2,Two-Stage CNN,320,15,4,Tesla T4,9.27,/kaggle/working/cpmk3/runs/maskrcnn/maskrcnn_img320/results.csv
+MaskRCNN-R50-FPNv2,Two-Stage CNN,960,15,2,Tesla T4,28.66,/kaggle/working/cpmk3/runs/maskrcnn/maskrcnn_img960/results.csv
+Mask2Former-Swin-Tiny,Transformer,320,15,8,Tesla T4,13.32,/kaggle/working/cpmk3/runs/mask2former/m2f_swin_tiny_img320/results.csv
+Mask2Former-Swin-Tiny,Transformer,960,15,8,Tesla T4,62.22,/kaggle/working/cpmk3/runs/mask2former/m2f_swin_tiny_img960/results.csv

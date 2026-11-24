@@ -1,0 +1,5 @@
+box_mAP50,box_mAP50_95,mask_mAP50,mask_mAP50_95,model,architecture_family,imgsz,dataset,eval_time_sec
+0.1251,0.0691,0.1136,0.0648,MaskRCNN-R50-FPNv2,Two-Stage CNN,320,Test_Asli,104.51
+0.0828,0.0489,0.0745,0.0438,MaskRCNN-R50-FPNv2,Two-Stage CNN,320,Test_HP_Sendiri,8.11
+0.1348,0.0754,0.1267,0.0747,MaskRCNN-R50-FPNv2,Two-Stage CNN,960,Test_Asli,222.32
+0.1356,0.0806,0.126,0.0795,MaskRCNN-R50-FPNv2,Two-Stage CNN,960,Test_HP_Sendiri,21.2

@@ -34,15 +34,31 @@
 
 | No | Model | Keluarga Arsitektur | Ukuran Input | Batch Size | Epoch | Platform / GPU | Waktu Training (menit) | File Log Asli (`results.csv`) |
 |----|-------|---------------------|--------------|------------|-------|----------------|------------------------|-------------------------------|
-| 1 | YOLOv8s-seg | One-Stage CNN | 320 | 16 | 50 | Colab Free T4 | | `logs/yolov8_320_results.csv` |
-| 2 | YOLOv8s-seg | One-Stage CNN | 640 | 16 | 50 | Colab Free T4 | | `logs/yolov8_640_results.csv` |
-| 3 | YOLOv8s-seg | One-Stage CNN | 960 | 4 | 50 | Colab Free T4 | | `logs/yolov8_960_results.csv` |
-| 4 | Mask R-CNN (R50-FPN-v2) | Two-Stage CNN | 320 | 4 | 15 | Kaggle T4 | | `logs/maskrcnn_320_results.csv` |
-| 5 | Mask R-CNN (R50-FPN-v2) | Two-Stage CNN | 640 | 4 | 15 | Kaggle T4 | | `logs/maskrcnn_640_results.csv` |
-| 6 | Mask R-CNN (R50-FPN-v2) | Two-Stage CNN | 960 | 2 | 15 | Kaggle T4 | | `logs/maskrcnn_960_results.csv` |
-| 7 | Mask2Former (Swin-Tiny) | Transformer | 320 | 2×4 (eff. 8) | 15 | Kaggle T4 | | `logs/mask2former_320_results.csv` |
-| 8 | Mask2Former (Swin-Tiny) | Transformer | 640 | 2×4 (eff. 8) | 15 | Kaggle T4 | | `logs/mask2former_640_results.csv` |
-| 9 | Mask2Former (Swin-Tiny) | Transformer | 960 | 1×8 (eff. 8) | 15 | Kaggle T4 | | `logs/mask2former_960_results.csv` |
+| 1 | YOLOv8s-seg | One-Stage CNN | 320 | 16 | 50 | Colab Free T4 | *(lihat `gpu_time_log.csv` Colab)* | `runs/yolov8_seg/yolov8s_seg_img320/results.csv` |
+| 2 | YOLOv8s-seg | One-Stage CNN | 640 | 16 | 50 | Colab Free T4 | *(lihat `gpu_time_log.csv` Colab)* | `runs/yolov8_seg/yolov8s_seg_img640/results.csv` |
+| 3 | YOLOv8s-seg | One-Stage CNN | 960 | 4 | 50 | Colab Free T4 | *(lihat `gpu_time_log.csv` Colab)* | `runs/yolov8_seg/yolov8s_seg_img960/results.csv` |
+| 4 | Mask R-CNN (R50-FPN-v2) | Two-Stage CNN | 320 | 4 | 15 | Kaggle Tesla T4 | 9.27 | `logs/kaggle/runs/maskrcnn/maskrcnn_img320/results.csv` |
+| 5 | Mask R-CNN (R50-FPN-v2) | Two-Stage CNN | 640 | 4 | 15 | Kaggle Tesla T4 | 13.91 | `logs/kaggle/runs/maskrcnn/maskrcnn_img640/results.csv` |
+| 6 | Mask R-CNN (R50-FPN-v2) | Two-Stage CNN | 960 | 2 | 15 | Kaggle Tesla T4 | 28.66 | `logs/kaggle/runs/maskrcnn/maskrcnn_img960/results.csv` |
+| 7 | Mask2Former (Swin-Tiny) | Transformer | 320 | 2×4 (eff. 8) | 15 | Kaggle Tesla T4 | 13.32 | `logs/kaggle/runs/mask2former/m2f_swin_tiny_img320/results.csv` |
+| 8 | Mask2Former (Swin-Tiny) | Transformer | 640 | 2×4 (eff. 8) | 15 | Kaggle Tesla T4 | 27.04 | `logs/kaggle/runs/mask2former/m2f_swin_tiny_img640/results.csv` |
+| 9 | Mask2Former (Swin-Tiny) | Transformer | 960 | 1×8 (eff. 8) | 15 | Kaggle Tesla T4 | 62.22 | `logs/kaggle/runs/mask2former/m2f_swin_tiny_img960/results.csv` |
+
+---
+
+## 1b. Rekap Hasil Evaluasi Lengkap (3 Model × 3 Resolusi × 2 Test Set)
+
+| Model | Keluarga | Input (px) | Test Asli (Box mAP@50 / Mask mAP@50 / Mask mAP@50-95) | Test HP Sendiri (Box mAP@50 / Mask mAP@50 / Mask mAP@50-95) | Domain Shift (Δ Mask mAP@50) |
+|-------|----------|------------|--------------------------------------------------------|--------------------------------------------------------------|------------------------------|
+| YOLOv8s-seg | One-Stage CNN | 320 | `0.1539` / `0.1403` / `0.0868` | `0.0792` / `0.0735` / `0.0341` | `-0.0668` |
+| YOLOv8s-seg | One-Stage CNN | 640 | `0.2120` / `0.2004` / `0.1306` | `0.2054` / `0.1937` / `0.1150` | `-0.0067` |
+| YOLOv8s-seg | One-Stage CNN | 960 | `0.1955` / `0.1856` / `0.1236` | `0.1875` / `0.1780` / `0.1179` | `-0.0076` |
+| Mask R-CNN R50-FPNv2 | Two-Stage CNN | 320 | `0.1251` / `0.1136` / `0.0648` | `0.0828` / `0.0745` / `0.0438` | `-0.0391` |
+| Mask R-CNN R50-FPNv2 | Two-Stage CNN | 640 | `0.1539` / `0.1448` / `0.0865` | `0.1363` / `0.1254` / `0.0783` | `-0.0194` |
+| Mask R-CNN R50-FPNv2 | Two-Stage CNN | 960 | `0.1348` / `0.1267` / `0.0747` | `0.1356` / `0.1260` / `0.0795` | `-0.0007` |
+| Mask2Former Swin-Tiny | Transformer | 320 | `0.0871` / `0.0687` / `0.0412` | `0.0481` / `0.0369` / `0.0214` | `-0.0318` |
+| Mask2Former Swin-Tiny | Transformer | 640 | `0.0973` / `0.0683` / `0.0455` | `0.0942` / `0.0411` / `0.0264` | `-0.0272` |
+| Mask2Former Swin-Tiny | Transformer | 960 | `0.0920` / `0.0641` / `0.0440` | `0.0771` / `0.0531` / `0.0284` | `-0.0110` |
 
 ---
 

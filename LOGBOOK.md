@@ -1,6 +1,6 @@
 # Logbook Eksperimen — Evaluasi CPMK 3 (Instance Segmentation)
 
-- **Nama / NRP:** `[Isi Nama / NRP Anda]`
+- **Nama / NRP:** Muhammad Robitul Jaksy / 5054241030
 - **Digit Terakhir NRP:** `0` → **Variabel Eksperimen:** Ukuran Input (`320` / `640` / `960`)
 - **Dataset Latih:** Panoptic Indoor Segmentation v5 (`panopticindoor/panoptic-indoor-segmentation` v5, 74 kelas)
 - **Test Set Sendiri:** 40+ foto ruangan nyata kamera HP sendiri (`cdaaptnia/test-hp-ruangan`, min. 10 kondisi sulit)

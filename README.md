@@ -1,4 +1,4 @@
-# Panduan Pengerjaan CPMK 3 — Instance Segmentation di Google Colab Free (NRP Akhiran 0)
+# Panduan Pengerjaan CPMK 3 — Instance Segmentation di Google Colab 
 
 Proyek ini berisi **4 notebook Google Colab** yang dirancang khusus agar hemat kuota GPU **Colab Free (Tesla T4 15GB)**, menyimpan seluruh hasil/checkpoint otomatis ke Google Drive, dan memenuhi seluruh komponen tugas:
 - Perbandingan **3 model dari 3 keluarga arsitektur berbeda**:

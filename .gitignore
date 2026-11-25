@@ -19,3 +19,10 @@ preannotated_*/
 # Secrets & env
 .env
 *.key
+
+# Local helper scripts
+generate_*.py
+make_*.py
+fix_*.py
+merge_*.py
+LOGBOOK_TEMPLATE.md
